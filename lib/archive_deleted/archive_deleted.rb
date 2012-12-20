@@ -7,7 +7,6 @@ module ArchiveDeleted
 		
 		module ClassMethods
 	    	def archive_deleted
-	    		send :include, InstanceMethods
 	    		send :after_destroy, :archive_deleted_ar
 	    	end
 
